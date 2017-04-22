@@ -6,6 +6,7 @@
 [![dev-dependencies](https://img.shields.io/david/dev/nomocas/htsl-lexicon.svg)]()
 [![npm](https://img.shields.io/npm/v/htsl-lexicon.svg)]()
 [![licence](https://img.shields.io/npm/l/htsl-lexicon.svg)]()
+[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 <!-- [![npm-downloads](https://img.shields.io/npm/dm/htsl-lexicon.svg)]() -->
 
 > HTML javascript DSL. Remove "m" from HTML.
