@@ -14,7 +14,8 @@
     "test": "mocha",
     "cover": "cross-env NODE_ENV=test nyc --reporter=lcov --reporter=text mocha test/*.js",
     "prepublish": "npm test",
-    "esdoc": "npm test && esdoc"
+    "esdoc": "npm test && esdoc",
+    "release": "standard-version"
   },
   "nyc": {
     "require": [
@@ -41,8 +42,8 @@
   },
   "homepage": "https://github.com/nomocas/htsl#readme",
   "dependencies": {
-    "babelute": "^0.4.3",
-    "nomocas-webutils": "0.0.7"
+    "babelute": "^0.5.0",
+    "nomocas-webutils": "^0.0.7"
   },
   "devDependencies": {
     "assert": "^1.4.1",
@@ -69,6 +70,7 @@
     "rollup-watch": "^3.2.2",
     "rollup-plugin-commonjs": "^8.0.2",
     "rollup-plugin-node-resolve": "^2.0.0",
+    "standard-version":"^4.0.0",
     "uglify-js": "^2.7.5"
   }
 }
