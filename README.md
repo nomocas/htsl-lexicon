@@ -52,7 +52,7 @@ And it could be extended for any other rendering engine. (example coming soon)
 
 - [htsl-component](https://github.com/nomocas/htsl-component)
 - htsl-postal-component ([component](https://github.com/nomocas/htsl-component) with [postaljs](https://github.com/postaljs/postal.js))
-- htsl-router
+- [htsl-router](https://github.com/nomocas/htsl-router)
 
 
 ## Examples
