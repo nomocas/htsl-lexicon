@@ -40,9 +40,16 @@ So, it should be used in conjonction with an output engine (called Pragmatics in
 
 And it could be extended for any other rendering engine. (example coming soon)
 
+## Dialects
+
+- [htsl-meta-tag-lexicon](https://github.com/nomocas/htsl-meta-tag-lexicon)
+- htsl-foundation-6-lexicon
+
+
 ## Plugins
 
 - [htsl-component](https://github.com/nomocas/htsl-component)
+- htsl-postal-component ([component](https://github.com/nomocas/htsl-component) with [postaljs](https://github.com/postaljs/postal.js))
 - htsl-router
 
 
