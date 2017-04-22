@@ -16,7 +16,7 @@ import { castNodeValueTo } from 'nomocas-webutils/lib/dom-utils'; // only used i
  * html lexicon
  * @type {Lexicon}
  * @public
- * @see  https://github.com/nomocas/babelute-html
+ * @see  https://github.com/nomocas/htsl
  */
 const htmlLexicon = bbl.createLexicon('html');
 

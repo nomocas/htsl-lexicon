@@ -1,6 +1,6 @@
 # Tools & plugins
 
-- babelute-html-view
-- babelute-html-loader
-- babelute-html-transition
+- htsl-view
+- htsl-loader
+- htsl-transition
 

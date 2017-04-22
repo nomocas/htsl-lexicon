@@ -4,7 +4,7 @@ import chai from 'chai';
 // const expect = chai.expect; 
 chai.should();
 
-describe('babelute-html', () => {
+describe('htsl', () => {
 	it('foo', () => {
 
 	});

@@ -46,7 +46,7 @@ for (const i in MyEmitterStore.methods)
 //__________________ create your lexicon (aka the components of your view(s))
 
 import babelute from 'babelute';
-import htmlLexicon from 'babelute-html/src/html-lexicon';
+import htmlLexicon from 'htsl/src/html-lexicon';
 
 const myLexicon = babelute.createLexicon('myLexiconName', htmlLexicon);
 
@@ -75,7 +75,7 @@ myLexicon.addCompounds((h) => {
 
 //__________________________ Use your lexicon with your store through diffing
 
-import differ from 'babelute-html/src/pragmatics/html-to-dom-diffing'; // first degree diffing (only for DOM)
+import differ from 'htsl/src/pragmatics/html-to-dom-diffing'; // first degree diffing (only for DOM)
 
 // don't forget to add your lexicon(s) to differ's targets
 differ.addLexicon(myLexicon);	
@@ -111,7 +111,7 @@ hashChange(); // set current route and launch
 
 ```
 
-see [todomvc example](https://github.com/nomocas/babelute-html-todomvc).
+see [todomvc example](https://github.com/nomocas/htsl-todomvc).
 
 ## FirstLevel AST
 

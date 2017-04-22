@@ -1,5 +1,5 @@
 {
-  "name": "babelute-html-lexicon",
+  "name": "htsl-lexicon",
   "version": "0.2.3",
   "description": "Babelute HTML5 DSL Lexicon. All you need to write HTML or describe DOM in pure js.",
   "main": "dist/bundles/index.js",
@@ -34,12 +34,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nomocas/babelute-html.git"
+    "url": "git+https://github.com/nomocas/htsl.git"
   },
   "bugs": {
-    "url": "https://github.com/nomocas/babelute-html/issues"
+    "url": "https://github.com/nomocas/htsl/issues"
   },
-  "homepage": "https://github.com/nomocas/babelute-html#readme",
+  "homepage": "https://github.com/nomocas/htsl#readme",
   "dependencies": {
     "babelute": "^0.4.3",
     "nomocas-webutils": "0.0.7"
