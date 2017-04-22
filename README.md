@@ -8,7 +8,9 @@
 [![dependecies](https://img.shields.io/david/nomocas/htsl-lexicon.svg)]()
 [![dev-dependencies](https://img.shields.io/david/dev/nomocas/htsl-lexicon.svg)]()
 
-> HTML javascript DSL. Remove "ml" from HTML.
+> HTML javascript DSL. Remove "m" from HTML.
+
+Hyper Text Specific Language.
 
 This library is the Babelute(js) lexicon containing HTML related words.
 
