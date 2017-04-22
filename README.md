@@ -28,7 +28,7 @@ As all lexicon, it only gives words and does not provide any implementation.
 So, it should be used in conjonction with an output engine (called Pragmatics in babelute's vocabulary) :
 - [htsl-dom-pragmatics](https://github.com/nomocas/htsl-dom-pragmatics)
 	- DOM Engine demo
-- htsl-string-pragmatics
+- [htsl-string-pragmatics](https://github.com/nomocas/htsl-string-pragmatics)
 	- Ultra fast server side string rendering.
 - [htsl-dom-diffing-pragmatics](https://github.com/nomocas/htsl-dom-diffing-pragmatics)
 	- __One of the lightest__ modern pure js html lib avaiable (around 4Ko gzipped with dependencies) 
