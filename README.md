@@ -2,8 +2,8 @@
 
 [![Travis branch](https://img.shields.io/travis/nomocas/htsl-lexicon/master.svg)](https://travis-ci.org/nomocas/htsl-lexicon)
 [![bitHound Overall Score](https://www.bithound.io/github/nomocas/htsl-lexicon/badges/score.svg)](https://www.bithound.io/github/nomocas/htsl-lexicon)
-[![dependecies](https://img.shields.io/david/nomocas/htsl-lexicon.svg)]()
-[![dev-dependencies](https://img.shields.io/david/dev/nomocas/htsl-lexicon.svg)]()
+[![bitHound Dependencies](https://www.bithound.io/github/nomocas/htsl-lexicon/badges/dependencies.svg)](https://www.bithound.io/github/nomocas/htsl-lexicon/master/dependencies/npm)
+[![bitHound Dev Dependencies](https://www.bithound.io/github/nomocas/htsl-lexicon/badges/devDependencies.svg)](https://www.bithound.io/github/nomocas/htsl-lexicon/master/dependencies/npm)
 [![npm](https://img.shields.io/npm/v/htsl-lexicon.svg)]()
 [![licence](https://img.shields.io/npm/l/htsl-lexicon.svg)]()
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
