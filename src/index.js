@@ -29,7 +29,7 @@ htmlLexicon.addAtoms(['tag', 'attr', 'prop', 'data', 'class', 'classes', 'id', '
  *******	COMPOUNDS WORDS (based on language atoms)
  *******/
 // simple tags (made with .tag) (list should be completed if needed)
-htmlLexicon.tagsList = ['body', 'div', 'h1', 'h2', 'h3', 'h4', 'h5', 'section', 'span', 'button', 'main', 'article', 'hr', 'header', 'footer', 'label', 'ul', 'li', 'p', 'small', 'b', 'strong', 'i', 'u', 'title', 'meta', 'table', 'tr', 'td', 'tbody', 'form', 'br'];
+htmlLexicon.tagsList = ['body', 'div', 'h1', 'h2', 'h3', 'h4', 'h5', 'section', 'span', 'button', 'main', 'article', 'hr', 'header', 'footer', 'label', 'ul', 'li', 'p', 'small', 'b', 'strong', 'i', 'u', 'title', 'meta', 'table', 'tr', 'td', 'tbody', 'form', 'br', 'abbr', 'textarea'];
 // events (made with .on) (list should be completed if needed)
 htmlLexicon.eventsList = ['click', 'blur', 'focus', 'submit', 'mouseover', 'mousedown', 'mouseup', 'mouseout', 'touchstart', 'touchend', 'touchcancel', 'touchleave', 'touchmove', 'drop', 'dragover', 'dragstart'];
 
@@ -83,8 +83,17 @@ htmlLexicon
 			textInput(val, babelute) {
 				return this.input('text', val, babelute);
 			},
+			emailInput(val, babelute) {
+				return this.input('email', val, babelute);
+			},
 			passwordInput(val, babelute) {
 				return this.input('password', val, babelute);
+			},
+			submitInput(val, babelute) {
+				return this.tag('input', [h.attr('type', 'submit').attr('value', val), babelute]);
+			},
+			hiddenInput(val, babelute) {
+				return this.tag('input', [h.attr('type', 'hidden').attr('value', val), babelute]);
 			},
 			checkbox(checked, babelute) {
 				return this.tag('input', [h.attr('type', 'checkbox').prop('checked', !!checked), babelute]);
@@ -96,7 +105,7 @@ htmlLexicon
 				return this.tag('option', [h.attr('value', value).prop('selected', !!selected), content]);
 			},
 			script(src, content) {
-				return this.tag('script', [h.attr('src', src).attr('type', 'text/javascript'), content]);
+				return this.tag('script', [h.if(src, h.attr('src', src)).attr('type', 'text/javascript'), content]);
 			},
 			a() {
 				arguments[0] = h.attr('href', arguments[0]);
