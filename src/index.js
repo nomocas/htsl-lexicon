@@ -23,7 +23,7 @@ const htmlLexicon = bbl.createLexicon('html');
 /*******
  *******	LANGUAGE ATOMS
  *******/
-htmlLexicon.addAtoms(['tag', 'attr', 'prop', 'data', 'class', 'classes', 'id', 'style', 'text', 'onDom', 'onString', 'if', 'each', 'keyedEach', 'html', 'component', 'ref', 'container', 'client', 'server']);
+htmlLexicon.addAtoms(['tag', 'attr', 'prop', 'data', 'class', 'classes', 'id', 'style', 'text', 'onDom', 'onString', 'if', 'each', 'keyedEach', 'html', 'component', 'ref', 'container', 'raw']);
 
 /*******
  *******	COMPOUNDS WORDS (based on language atoms)
