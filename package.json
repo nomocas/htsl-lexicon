@@ -1,6 +1,6 @@
 {
   "name": "htsl-lexicon",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "Babelute HTML5 DSL Lexicon. All you need to write HTML or describe DOM in pure js.",
   "main": "dist/bundles/index.js",
   "module": "dist/bundles/index.mjs",
