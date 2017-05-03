@@ -455,7 +455,7 @@ const myDialectLexicon = htmlLexicon.createDialect('my-dialect')
 
 const h = myDialectLexicon.initialier();
 
-const sentence = h.myCompoundWord('hello', 'world').myOtherCompoundWord([{ name:'one' }, { name:'two' }])...;
+const sentence = h.myCompoundWord('hello', 'world').myOtherCompoundWord({ name:'one' }, { name:'two' })...;
 
 ```
 
