@@ -1,6 +1,5 @@
 /**
  * ***** Babelute HTML5 DSL lexicon *****
- *
  * 
  * @author Gilles Coomans
  * @licence MIT
@@ -58,21 +57,27 @@ htmlLexicon
 	})
 	.addCompounds((h) => {
 		return {
+			a(...children) {
+				children[0] = h.attr('href', children[0]);
+				return this.tag('a', children);
+			},
+			img(...children) {
+				children[0] = h.attr('src', children[0]);
+				return this.tag('img', children);
+			},
+			nbsp() {
+				return this.text('\u00A0');
+			},
 			select(selected, options, babelute = undefined) {
 				if (arguments.length === 1) // use a simple tag that receive a babelute as child (first arg)
 					return this.tag('select', [selected]);
 				return this.tag('select', [
-					h.each(options, (option) => {
-						return h.option(option.value, option.label, option.value === selected);
-					}),
+					h.each(options, (option) => h.option(option.value, option.label, option.value === selected)),
 					babelute
 				]);
 			},
-			link(href, rel, babelute) {
-				return this.tag('link', [h.attr('href', href).attr('rel', rel), babelute]);
-			},
-			linkCSS(href) {
-				return this.link(href, 'stylesheet', h.attr('type', 'text/css'));
+			option(value, content, selected) {
+				return this.tag('option', [h.attr('value', value).prop('selected', !!selected), content]);
 			},
 			input(type, val, babelute) {
 				return this.tag('input', [h.attr('type', type).prop('value', val), babelute]);
@@ -98,28 +103,23 @@ htmlLexicon
 			radio(checked, babelute) {
 				return this.tag('input', [h.attr('type', 'radio').prop('checked', !!checked), babelute]);
 			},
-			option(value, content, selected) {
-				return this.tag('option', [h.attr('value', value).prop('selected', !!selected), content]);
+			link(href, rel, babelute) {
+				return this.tag('link', [h.attr('href', href).attr('rel', rel), babelute]);
 			},
-			script(src, content) {
-				return this.tag('script', [h.if(src, h.attr('src', src)).attr('type', 'text/javascript'), content]);
+			linkCSS(href) {
+				return this.link(href, 'stylesheet', h.attr('type', 'text/css'));
 			},
-			a() {
-				arguments[0] = h.attr('href', arguments[0]);
-				return this.tag('a', arguments);
+			scriptLink(src, type = 'text/javascript') {
+				return this.tag('script', [h.attr('src', src).attr('type', type)]);
 			},
-			img() {
-				arguments[0] = h.attr('src', arguments[0]);
-				return this.tag('img', arguments);
-			},
-			nbsp() {
-				return this.text('\u00A0');
+			scriptRaw(content, type = 'text/javascript') {
+				return this.tag('script', [h.attr('type', type).prop('innerText', content)]);
 			},
 			visible(yes) {
-				return this.style('visibility', yes ? 'visible' : 'hidden');
+				return this.style('visibility', !yes ? 'hidden' : 'visible');
 			},
 			display(flag) {
-				return this.style('display', typeof flag === 'string' ? flag : (flag ? 'block' : 'none'));
+				return this.style('display', typeof flag === 'string' ? flag : (!flag ? 'none' : '')); // reseting display with empty string as in http://jsbin.com/wasuvi/1/edit?html,js,output
 			},
 			disabled(flag) {
 				return this.prop('disabled', !!flag);
@@ -145,12 +145,6 @@ htmlLexicon
 			}
 		};
 	});
-
-// htmlLexicon.tagsList.forEach((tagName) => {
-// 	htmlLexicon.FirstLevel.prototype[tagName] = function() {
-// 		return this._append('html', 'tag', [tagName, arguments]);
-// 	};
-// });
 
 export default htmlLexicon;
 
