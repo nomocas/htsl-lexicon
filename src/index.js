@@ -35,9 +35,6 @@ htmlLexicon.eventsList = ['click', 'blur', 'focus', 'submit', 'mouseover', 'mous
 
 htmlLexicon
 	.addAliases({
-		execute(method, ...args) {
-			return this._append('html', 'execute', [method, args]);
-		},
 		switchUse(lexemRef, ...args) {
 			return this._append('html', 'switchUse', [lexemRef, args]);
 		},
