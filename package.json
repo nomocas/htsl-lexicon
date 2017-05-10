@@ -15,7 +15,8 @@
     "cover": "cross-env NODE_ENV=test nyc --reporter=lcov --reporter=text mocha test/*.js",
     "prepublish": "npm test",
     "esdoc": "npm test && esdoc",
-    "release": "standard-version"
+    "release": "standard-version",
+    "postinstall":"./node_modules/precommit/bin/cli.js install"
   },
   "precommit": [
     "npm run prebuild"
