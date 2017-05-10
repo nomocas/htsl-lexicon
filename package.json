@@ -17,6 +17,7 @@
     "esdoc": "npm test && esdoc",
     "release": "standard-version"
   },
+  "precommit": ["npm run prebuild"],
   "nyc": {
     "require": [
       "babel-register"
