@@ -9,7 +9,7 @@
  * @external {Lexicon} https://github.com/nomocas/babelute
  */
 import bbl from 'babelute';
-import { castNodeValueTo } from 'nomocas-webutils/lib/dom-utils'; // only used in contentEditable. safe for server and string output usage.
+import domUtils from 'nomocas-webutils/lib/dom-utils'; // only used in contentEditable. safe for server and string output usage.
 
 /**
  * html lexicon
@@ -144,12 +144,12 @@ htmlLexicon
 					.class('content-edited', !!opt.isEditable)
 					.prop(contentProperty, opt.value || opt.placeholder || '')
 					.on('focus', e => {
-						const val = castNodeValueTo(e.currentTarget, opt.valueType || 'text');
+						const val = domUtils.castNodeValueTo(e.currentTarget, opt.valueType || 'text');
 						if (val === opt.placeholder)
 							e.currentTarget[contentProperty] = '';
 					})
 					.on(opt.updateOnEvent || 'blur', e => {
-						const val = castNodeValueTo(e.currentTarget, opt.valueType || 'text');
+						const val = domUtils.castNodeValueTo(e.currentTarget, opt.valueType || 'text');
 						if (val !== opt.value && val !== opt.placeholder)
 							opt.updateHandler(val);
 						else if (val === '')
@@ -157,7 +157,7 @@ htmlLexicon
 					})
 					.click((e) => {
 						if (opt.isEditable) {
-							const val = castNodeValueTo(e.currentTarget, opt.valueType || 'text');
+							const val = domUtils.castNodeValueTo(e.currentTarget, opt.valueType || 'text');
 							if (opt.placeholder && val === opt.placeholder)
 								e.currentTarget[contentProperty] = '';
 						}
