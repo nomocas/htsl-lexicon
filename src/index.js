@@ -124,21 +124,38 @@ htmlLexicon
 			disabled(flag) {
 				return this.prop('disabled', !!flag);
 			},
-			contentEditable(opt /*{ value, updateHandler, valueType = "text"[|"html"|"integer"], updateOnEvent = "blur", isEditable = true, placeholder = '...' } */ ) {
+			contentEditable(opt = {} /*{ value, updateHandler, valueType = "text"[|"html"|"integer"], updateOnEvent = "blur", isEditable = true, placeholder = '...', multiline: false } */ ) {
+
 				const contentProperty = opt.valueType === 'html' ? 'innerHTML' : 'textContent';
 				return this
+					.on('keydown', e => {
+						const code = e.keyCode ? e.keyCode : e.which;
+						if (!opt.multiline && code === 13 /* enter */ )
+							e.preventDefault();
+						else if (code === 27 /* esc */ )
+							e.currentTarget.blur();
+						else if (opt.maxLength && !e.ctrlKey && !e.shiftKey && !e.altKey && !e.metaKey && [37, 38, 39, 40 /* arrows */ , 8 /* backspace */, 9 /* tab */ ].indexOf(code) === -1 && e.currentTarget[contentProperty].length > opt.maxLength)
+							e.preventDefault();
+					})
 					.prop('contentEditable', !!opt.isEditable)
+					.class('content-edited', !!opt.isEditable)
 					.prop(contentProperty, opt.value || opt.placeholder || '')
-					.on(opt.updateOnEvent || 'blur', (e) => {
+					.on('focus', e => {
 						const val = castNodeValueTo(e.currentTarget, opt.valueType || 'text');
-						if (val !== opt.value)
+						if (val === opt.placeholder)
+							e.currentTarget[contentProperty] = '';
+					})
+					.on(opt.updateOnEvent || 'blur', e => {
+						const val = castNodeValueTo(e.currentTarget, opt.valueType || 'text');
+						if (val !== opt.value && val !== opt.placeholder)
 							opt.updateHandler(val);
 						else if (val === '')
 							e.currentTarget[contentProperty] = opt.placeholder || '';
 					})
 					.click((e) => {
 						if (opt.isEditable) {
-							if (opt.placeholder && e.currentTarget[contentProperty] === opt.placeholder)
+							const val = castNodeValueTo(e.currentTarget, opt.valueType || 'text');
+							if (opt.placeholder && val === opt.placeholder)
 								e.currentTarget[contentProperty] = '';
 						}
 					});
