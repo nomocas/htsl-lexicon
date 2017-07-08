@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.2.8"></a>
+## [0.2.8](https://github.com/nomocas/htsl-lexicon/compare/v0.2.7...v0.2.8) (2017-07-08)
+
+
+### Bug Fixes
+
+* **contentEditable:** fix import from domUtils for castNodeValue ([195dd9c](https://github.com/nomocas/htsl-lexicon/commit/195dd9c))
+
+
+
 <a name="0.2.7"></a>
 ## [0.2.7](https://github.com/nomocas/htsl-lexicon/compare/v0.2.6...v0.2.7) (2017-07-08)
 
