@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.2.10"></a>
+## [0.2.10](https://github.com/nomocas/htsl-lexicon/compare/v0.2.9...v0.2.10) (2017-07-08)
+
+
+### Bug Fixes
+
+* **domUtils:** fix nomocas-webutils dependency to follow domUtils export ([c5cda42](https://github.com/nomocas/htsl-lexicon/commit/c5cda42))
+
+
+
 <a name="0.2.9"></a>
 ## [0.2.9](https://github.com/nomocas/htsl-lexicon/compare/v0.2.8...v0.2.9) (2017-07-08)
 
