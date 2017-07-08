@@ -1,82 +1,82 @@
 {
-	"name": "htsl-lexicon",
-	"version": "0.2.6",
-	"description": "Babelute HTML5 DSL Lexicon. All you need to write HTML or describe DOM in pure js.",
-	"main": "dist/bundles/index.js",
-	"module": "dist/bundles/index.mjs",
-	"jsnext:main": "dist/bundles/index.mjs",
-	"scripts": {
-		"prebuild": "eslint src test",
-		"build": "npm run bundles-build",
-		"bundles-build": "rollup -c",
-		"bundles-watch": "rollup -c -w",
-		"pretest": "npm run build",
-		"test": "mocha",
-		"cover": "cross-env NODE_ENV=test nyc --reporter=lcov --reporter=text mocha test/*.js",
-		"prepublish": "npm test",
-		"precommit": "npm run prebuild",
-		"prepush": "npm test",
-		"esdoc": "npm test && esdoc",
-		"release": "standard-version"
-	},
-	"nyc": {
-		"require": [
-			"babel-register"
-		],
-		"sourceMap": false,
-		"instrument": false
-	},
-	"keywords": [
-		"string-rendering",
-		"dom-rendering",
-		"dom-diffing",
-		"template",
-		"html5",
-		"DSL",
-		"functional-component",
-		"views"
-	],
-	"author": "Gilles Coomans",
-	"license": "MIT",
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/nomocas/htsl-lexicon.git"
-	},
-	"bugs": {
-		"url": "https://github.com/nomocas/htsl-lexicon/issues"
-	},
-	"homepage": "https://github.com/nomocas/htsl-lexicon#readme",
-	"dependencies": {
-		"babelute": "^0.6.0",
-		"nomocas-webutils": "^0.0.7"
-	},
-	"devDependencies": {
-		"assert": "^1.4.1",
-		"babel-cli": "^6.14.0",
-		"babel-plugin-external-helpers": "^6.22.0",
-		"babel-plugin-istanbul": "^4.1.1",
-		"babel-plugin-unassert": "^2.1.2",
-		"babel-preset-es2015": "^6.14.0",
-		"babel-register": "^6.14.0",
-		"babelrc-rollup": "^3.0.0",
-		"chai": "^3.5.0",
-		"cross-env": "^5.0.0",
-		"eslint": "^3.15.0",
-		"eslint-plugin-import": "^2.2.0",
-		"husky": "^0.14.3",
-		"karma": "^1.4.1",
-		"karma-chai": "^0.1.0",
-		"karma-chrome-launcher": "^2.0.0",
-		"karma-mocha": "^1.3.0",
-		"karma-rollup-preprocessor": "^4.0.0",
-		"mocha": "^3.2.0",
-		"nyc": "^10.2.0",
-		"rollup": "^0.41.6",
-		"rollup-plugin-babel": "^2.7.1",
-		"rollup-plugin-commonjs": "^8.0.2",
-		"rollup-plugin-node-resolve": "^2.0.0",
-		"rollup-watch": "^3.2.2",
-		"standard-version": "^4.0.0",
-		"uglify-js": "^3.0.3"
-	}
+  "name": "htsl-lexicon",
+  "version": "0.2.7",
+  "description": "Babelute HTML5 DSL Lexicon. All you need to write HTML or describe DOM in pure js.",
+  "main": "dist/bundles/index.js",
+  "module": "dist/bundles/index.mjs",
+  "jsnext:main": "dist/bundles/index.mjs",
+  "scripts": {
+    "prebuild": "eslint src test",
+    "build": "npm run bundles-build",
+    "bundles-build": "rollup -c",
+    "bundles-watch": "rollup -c -w",
+    "pretest": "npm run build",
+    "test": "mocha",
+    "cover": "cross-env NODE_ENV=test nyc --reporter=lcov --reporter=text mocha test/*.js",
+    "prepublish": "npm test",
+    "precommit": "npm run prebuild",
+    "prepush": "npm test",
+    "esdoc": "npm test && esdoc",
+    "release": "standard-version"
+  },
+  "nyc": {
+    "require": [
+      "babel-register"
+    ],
+    "sourceMap": false,
+    "instrument": false
+  },
+  "keywords": [
+    "string-rendering",
+    "dom-rendering",
+    "dom-diffing",
+    "template",
+    "html5",
+    "DSL",
+    "functional-component",
+    "views"
+  ],
+  "author": "Gilles Coomans",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nomocas/htsl-lexicon.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nomocas/htsl-lexicon/issues"
+  },
+  "homepage": "https://github.com/nomocas/htsl-lexicon#readme",
+  "dependencies": {
+    "babelute": "^0.6.0",
+    "nomocas-webutils": "^0.0.7"
+  },
+  "devDependencies": {
+    "assert": "^1.4.1",
+    "babel-cli": "^6.14.0",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-istanbul": "^4.1.1",
+    "babel-plugin-unassert": "^2.1.2",
+    "babel-preset-es2015": "^6.14.0",
+    "babel-register": "^6.14.0",
+    "babelrc-rollup": "^3.0.0",
+    "chai": "^3.5.0",
+    "cross-env": "^5.0.0",
+    "eslint": "^3.15.0",
+    "eslint-plugin-import": "^2.2.0",
+    "husky": "^0.14.3",
+    "karma": "^1.4.1",
+    "karma-chai": "^0.1.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-mocha": "^1.3.0",
+    "karma-rollup-preprocessor": "^4.0.0",
+    "mocha": "^3.2.0",
+    "nyc": "^10.2.0",
+    "rollup": "^0.41.6",
+    "rollup-plugin-babel": "^2.7.1",
+    "rollup-plugin-commonjs": "^8.0.2",
+    "rollup-plugin-node-resolve": "^2.0.0",
+    "rollup-watch": "^3.2.2",
+    "standard-version": "^4.0.0",
+    "uglify-js": "^3.0.3"
+  }
 }
