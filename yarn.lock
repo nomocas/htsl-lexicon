@@ -2702,9 +2702,9 @@ node-pre-gyp@^0.6.29:
     tar "~2.2.1"
     tar-pack "~3.3.0"
 
-nomocas-webutils@^0.0.7:
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/nomocas-webutils/-/nomocas-webutils-0.0.7.tgz#1efdec1693430567c9e00bf97eeef6feed7d6581"
+nomocas-webutils@^0.0.8:
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/nomocas-webutils/-/nomocas-webutils-0.0.8.tgz#a48f2c700bd0fca0c3bd56cf76a9a1a6c2236a50"
 
 nopt@~3.0.6:
   version "3.0.6"
@@ -3693,8 +3693,8 @@ trim-newlines@^1.0.0:
   resolved "https://registry.yarnpkg.com/trim-newlines/-/trim-newlines-1.0.0.tgz#5887966bb582a4503a41eb524f7d35011815a613"
 
 trim-off-newlines@^1.0.0:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/trim-off-newlines/-/trim-off-newlines-1.0.1.tgz#9f9ba9d9efa8764c387698bcbfeb2c848f11adb3"
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/trim-off-newlines/-/trim-off-newlines-1.0.3.tgz#8df24847fcb821b0ab27d58ab6efec9f2fe961a1"
 
 tryit@^1.0.1:
   version "1.0.3"
